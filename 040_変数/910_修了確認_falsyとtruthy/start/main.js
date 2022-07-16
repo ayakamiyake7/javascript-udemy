@@ -4,7 +4,7 @@
  */
 // console.log("0 == false", 0 == false);
 // console.log("0 === false", 0 === false);
-// console.log('"false" == false', "false" == false);
+console.log('"false" == false', "false" == false);
 // console.log('"0" == 0', "0" == 0);
 // console.log('Boolean("0") === false', Boolean("0") === false);
 // console.log('Boolean(0) === false', Boolean(0) === false);
@@ -16,18 +16,17 @@
  * 問題２：
  * 関数fnの引数numが渡ってこない場合（undefinedまたはnullの場合）のみ、
  * 初期値として-1を設定したいものとします。
- * 
+ *
  * 以下の関数fnの初期化を適切に書き直してください。
  * ※aには0以上の整数値が渡ってくるものとします。
  */
 let a = 1;
 
 function fn(num) {
-    num = num || -1;
-    console.log(num);
+  num = num || -1;
+  console.log(num);
 }
 fn(a);
-
 
 /**
  * 問題３：
@@ -39,3 +38,8 @@ fn(a);
  * greeting("Bob"); -> 出力結果："hello, Bob"
  *
  */
+function greeting(name, greet = "hello") {
+  console.log(`${greet}, ${name}`);
+}
+greeting("Bob", "hi");
+greeting("Bob");
